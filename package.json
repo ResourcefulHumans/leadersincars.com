@@ -1,0 +1,16 @@
+{
+  "name": "leadersincarsgettingcoffee-teaser",
+  "version": "1.0.0",
+  "description": "Teaser page for leadersincarsgettingcoffee.com",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ResourcefulHumans/leadersincarsgettingcoffee.com.git"
+  },
+  "author": "Resourcful Humans <info@resourcful-humans.com> | http://resourceful-humans.com/",
+  "license": "UNLICENSED",
+  "homepage": "https://leadersincarsgettingcoffee.com"
+}
