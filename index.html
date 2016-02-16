@@ -176,6 +176,36 @@
       color: #fff;
       border-color: #3399ff;
     }
+    
+    nav {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      text-align: center;
+    } 
+    
+    nav a {
+      color: rgba(255, 255, 255, 0.5);
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      font-size: 12px;
+      padding-right: 0.25em;
+    }
+
+    nav a:hover, nav a:active, nav a:hover em, nav a:active em {
+      color: rgba(255, 255, 255, 1);
+    }
+
+    nav a + a {
+      border-left: 1px solid rgba(255, 255, 255, 0.25);
+      padding-left: 0.5em;
+    }
+
+    nav a em {
+      font-style: normal;
+      color: #3399ff;
+    }
+    
     @media (min-width: 600px) {
       a.button {
         font-size: 30px;
@@ -299,6 +329,10 @@
     </a>
   </footer>
 </main>
+<nav>
+  <a href="http://resourceful-humans.com/" rel="me" target="_blank"><em>Resourceful</em> Humans</a>
+  <a href="http://resourceful-humans.com/landingpage/impressum.html" rel="me" target="_blank">Imprint &amp; Privacy</a>
+</nav>
 <script>
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
