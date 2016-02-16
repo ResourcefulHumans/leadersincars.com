@@ -12,5 +12,8 @@
   },
   "author": "Resourcful Humans <info@resourcful-humans.com> | http://resourceful-humans.com/",
   "license": "UNLICENSED",
-  "homepage": "https://leadersincarsgettingcoffee.com"
+  "homepage": "https://leadersincarsgettingcoffee.com",
+  "devDependencies": {
+    "node-static": "^0.7.7"
+  }
 }

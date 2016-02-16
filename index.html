@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Leaders in Cars getting Coffee</title>
   <meta name="description" content="presented for and by Resourceful Humans">
   <meta name="author" content="Resourcful Humans <info@resourcful-humans.com> | http://resourceful-humans.com/">
@@ -28,21 +28,31 @@
   <meta name="msapplication-wide310x150logo" content="./favicons/mstile-310x150.png"/>
   <meta name="msapplication-square310x310logo" content="./favicons/mstile-310x310.png"/>
   <style type="text/css">
+    * {
+      box-sizing: border-box;
+    }
+    
     html {
-      background: url('https://images.contentful.com/6z58zwugr0rp/X6S2Y9KuGYY8IQqSIaEko/702fd96f6b446a974cb26523cc1bd849/550_coffee.jpg?w=1200&q=55') center center no-repeat;
       min-height: 100%;
+      background: url('https://images.contentful.com/6z58zwugr0rp/X6S2Y9KuGYY8IQqSIaEko/702fd96f6b446a974cb26523cc1bd849/550_coffee.jpg?w=1200&q=55') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
       background-size: cover;
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://images.contentful.com/6z58zwugr0rp/X6S2Y9KuGYY8IQqSIaEko/702fd96f6b446a974cb26523cc1bd849/550_coffee.jpg?w=1200&q=55', sizingMethod='scale')";
+      
     }
 
     body {
       min-height: 100%;
       font-family: 'archisticobold', serif;
+      padding: 0;
+      margin: 0;
     }
 
     main {
       display: block;
-      max-width: 960px;
-      margin: 0 auto;
+      margin: 1em;
     }
 
     header {
@@ -50,9 +60,9 @@
     }
 
     h1 {
+      font-size: 63px;
       color: #3399ff;
       font-weight: bold;
-      font-size: 182px;
       text-transform: uppercase;
       margin: 0;
       line-height: 80%;
@@ -87,10 +97,10 @@
       text-transform: uppercase;
       color: #d40000;
       position: absolute;
-      top: 100px;
-      left: -45px;
       transform: rotate(-23deg);
-      font-size: 30px;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.35);
+      top: 20px;
+      left: -10px;
     }
 
     .comingsoon:before {
@@ -104,7 +114,7 @@
     header p {
       color: #fff;
       font-size: 30px;
-      text-align: right;
+      text-align: center;
     }
 
     header p img {
@@ -124,32 +134,124 @@
     .clearfix:after {
       clear: both;
     }
-    
+
     .hidden {
       display: none;
     }
-    
+
     footer {
       color: #fff;
       text-align: center;
       margin-top: 3em;
+      margin-bottom: 5em;
     }
-    footer a.button {
+
+    a.button {
       border: 1px solid #fff;
-      border-radius: 15px;
-      padding: 15px;
       text-decoration: none;
-      font-size: 30px;
       text-shadow: -1px -1px 0 #3399ff, 1px -1px 0 #3399ff;
       background-color: #fff;
       color: #3399ff;
+      font-size: 25px;
+      border-radius: 10px;
+      padding: 10px;
     }
-    footer a.button:active {
+
+    a.button:active {
       text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff;
       background-color: #3399ff;
       color: #fff;
       border-color: #3399ff;
     }
+    @media (min-width: 600px) {
+      a.button {
+        font-size: 30px;
+        border-radius: 15px;
+        padding: 15px;
+      }
+      .comingsoon {
+        font-size: 26px;
+        top: 40px;
+      }
+    }
+    @media (min-width: 700px) {
+      header p {
+        text-align: right;
+      }
+      .comingsoon {
+        top: 50px;
+        font-size: 26px;
+      }
+    }
+
+    @media (min-width: 900px) {
+      main {
+        margin: 0 auto;
+        max-width: 900px;
+      }
+      .comingsoon {
+        top: 85px;
+        left: -25px;
+        font-size: 26px;
+      }
+    }
+
+    @media (min-width: 350px) { h1 { font-size: 61px; }}
+    @media (min-width: 360px) { h1 { font-size: 62px; }}
+    @media (min-width: 370px) { h1 { font-size: 64px; }}
+    @media (min-width: 380px) { h1 { font-size: 66px; }}
+    @media (min-width: 390px) { h1 { font-size: 68px; }}
+    @media (min-width: 400px) { h1 { font-size: 70px; }}
+    @media (min-width: 410px) { h1 { font-size: 72px; }}
+    @media (min-width: 420px) { h1 { font-size: 74px; }}
+    @media (min-width: 430px) { h1 { font-size: 76px; }}
+    @media (min-width: 440px) { h1 { font-size: 78px; }}
+    @media (min-width: 450px) { h1 { font-size: 80px; }}
+    @media (min-width: 460px) { h1 { font-size: 82px; }}
+    @media (min-width: 470px) { h1 { font-size: 84px; }}
+    @media (min-width: 480px) { h1 { font-size: 86px; }}
+    @media (min-width: 490px) { h1 { font-size: 88px; }}
+    @media (min-width: 500px) { h1 { font-size: 90px; }}
+    @media (min-width: 510px) { h1 { font-size: 92px; }}
+    @media (min-width: 520px) { h1 { font-size: 94px; }}
+    @media (min-width: 530px) { h1 { font-size: 96px; }}
+    @media (min-width: 540px) { h1 { font-size: 97px; }}
+    @media (min-width: 550px) { h1 { font-size: 99px; }}
+    @media (min-width: 560px) { h1 { font-size: 101px; }}
+    @media (min-width: 570px) { h1 { font-size: 103px; }}
+    @media (min-width: 580px) { h1 { font-size: 105px; }}
+    @media (min-width: 590px) { h1 { font-size: 107px; }}
+    @media (min-width: 600px) { h1 { font-size: 109px; }}
+    @media (min-width: 610px) { h1 { font-size: 111px; }}
+    @media (min-width: 620px) { h1 { font-size: 113px; }}
+    @media (min-width: 630px) { h1 { font-size: 115px; }}
+    @media (min-width: 640px) { h1 { font-size: 117px; }}
+    @media (min-width: 650px) { h1 { font-size: 119px; }}
+    @media (min-width: 660px) { h1 { font-size: 121px; }}
+    @media (min-width: 670px) { h1 { font-size: 123px; }}
+    @media (min-width: 680px) { h1 { font-size: 125px; }}
+    @media (min-width: 690px) { h1 { font-size: 127px; }}
+    @media (min-width: 700px) { h1 { font-size: 129px; }}
+    @media (min-width: 710px) { h1 { font-size: 131px; }}
+    @media (min-width: 720px) { h1 { font-size: 133px; }}
+    @media (min-width: 730px) { h1 { font-size: 134px; }}
+    @media (min-width: 740px) { h1 { font-size: 136px; }}
+    @media (min-width: 750px) { h1 { font-size: 138px; }}
+    @media (min-width: 760px) { h1 { font-size: 140px; }}
+    @media (min-width: 770px) { h1 { font-size: 142px; }}
+    @media (min-width: 780px) { h1 { font-size: 144px; }}
+    @media (min-width: 790px) { h1 { font-size: 146px; }}
+    @media (min-width: 800px) { h1 { font-size: 148px; }}
+    @media (min-width: 810px) { h1 { font-size: 150px; }}
+    @media (min-width: 820px) { h1 { font-size: 152px; }}
+    @media (min-width: 830px) { h1 { font-size: 154px; }}
+    @media (min-width: 840px) { h1 { font-size: 156px; }}
+    @media (min-width: 850px) { h1 { font-size: 158px; }}
+    @media (min-width: 860px) { h1 { font-size: 160px; }}
+    @media (min-width: 870px) { h1 { font-size: 162px; }}
+    @media (min-width: 880px) { h1 { font-size: 164px; }}
+    @media (min-width: 890px) { h1 { font-size: 166px; }}
+    @media (min-width: 900px) { h1 { font-size: 170px; }}
   </style>
   <link rel="stylesheet" type="text/css" href="fonts/Archistico_Bold-webfont.css">
   <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
@@ -184,8 +286,6 @@
     </a>
   </footer>
 </main>
-
-
 <script>
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
