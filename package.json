@@ -10,15 +10,17 @@
   "license": "UNLICENSED",
   "homepage": "https://leadersincarsgettingcoffee.com",
   "devDependencies": {
-    "node-static": "^0.7.7"
-  },
-  "devDependencies": {
+    "node-static": "^0.7.7",
     "ghooks": "^1.0.3",
-    "validate-commit-msg": "^2.0.0"
+    "validate-commit-msg": "^2.0.0",
+    "semantic-release": "^4.3.5"
   },
   "config": {
     "ghooks": {
       "commit-msg": "validate-commit-msg"
     }
+  },
+  "scripts": {
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   }
 }
