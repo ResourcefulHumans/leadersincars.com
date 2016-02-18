@@ -110,9 +110,9 @@
       text-transform: uppercase;
       color: #d40000;
       position: absolute;
-      transform: rotate(-23deg);
+      transform: rotate(-12deg);
+      top: 10px;
       text-shadow: 0 0 8px rgba(255, 255, 255, 0.35);
-      top: 20px;
       left: -10px;
     }
 
@@ -126,12 +126,12 @@
 
     header p {
       color: #fff;
-      font-size: 30px;
+      font-size: 20px;
       text-align: center;
     }
 
     header p img {
-      width: 300px;
+      width: 100%;
       vertical-align: middle;
     }
 
@@ -165,7 +165,7 @@
       text-shadow: -1px -1px 0 #3399ff, 1px -1px 0 #3399ff;
       background-color: #fff;
       color: #3399ff;
-      font-size: 25px;
+      font-size: 20px;
       border-radius: 10px;
       padding: 10px;
     }
@@ -184,6 +184,10 @@
       text-align: center;
     } 
     
+    nav a:first-child {
+      display: none;
+    }
+    
     nav a {
       color: rgba(255, 255, 255, 0.5);
       font-family: Arial, sans-serif;
@@ -196,14 +200,19 @@
       color: rgba(255, 255, 255, 1);
     }
 
-    nav a + a {
-      border-left: 1px solid rgba(255, 255, 255, 0.25);
-      padding-left: 0.5em;
-    }
-
     nav a em {
       font-style: normal;
       color: #3399ff;
+    }
+
+    @media (min-width: 340px) {
+      header p img {
+        width: 300px;
+      }
+      .comingsoon {
+        transform: rotate(-32deg);
+        top: 20px;
+      }
     }
     
     @media (min-width: 600px) {
@@ -215,6 +224,14 @@
       .comingsoon {
         font-size: 26px;
         top: 40px;
+      }
+
+      nav a:first-child {
+        display: inline;
+      }
+      nav a + a {
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        padding-left: 0.5em;
       }
     }
     @media (min-width: 700px) {
@@ -239,6 +256,11 @@
       }
     }
 
+    @media (min-width: 300px) { h1 { font-size: 51px; }}
+    @media (min-width: 310px) { h1 { font-size: 53px; }}
+    @media (min-width: 320px) { h1 { font-size: 55px; }}
+    @media (min-width: 330px) { h1 { font-size: 57px; }}
+    @media (min-width: 340px) { h1 { font-size: 59px; }}
     @media (min-width: 350px) { h1 { font-size: 61px; }}
     @media (min-width: 360px) { h1 { font-size: 62px; }}
     @media (min-width: 370px) { h1 { font-size: 64px; }}
