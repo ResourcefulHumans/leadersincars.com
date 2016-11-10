@@ -104,6 +104,10 @@
       font-size: 50%;
     }
 
+    dl {
+      margin: 0;
+    }
+
     .comingsoon {
       font-family: 'Anton', sans-serif;
       text-transform: uppercase;
@@ -427,20 +431,28 @@
   <footer>
     <div class="countdown hidden">
       <div class="countdown__unit-time countdown__unit-time--days">
-        <dt>days</dt>
-        <dd>00</dd>
+        <dl>
+          <dt>days</dt>
+          <dd>00</dd>
+        </dl>
       </div>
       <div class="countdown__unit-time countdown__unit-time--hours">
-        <dt>hours</dt>
-        <dd>00</dd>
+        <dl>
+          <dt>hours</dt>
+          <dd>00</dd>
+        </dl>
       </div>
       <div class="countdown__unit-time countdown__unit-time--mins">
-        <dt>mins</dt>
-        <dd>00</dd>
+        <dl>
+          <dt>mins</dt>
+          <dd>00</dd>
+        </dl>
       </div>
       <div class="countdown__unit-time countdown__unit-time--secs">
-        <dt>secs</dt>
-        <dd>00</dd>
+        <dl>
+          <dt>secs</dt>
+          <dd>00</dd>
+        </dl>
       </div>
     </div>
     <a href="http://eepurl.com/bQzY2L" class="button" target="_blank">
@@ -461,17 +473,17 @@
     var momentDt = moment.tz('2016-12-12 00:00:00', 'CET');
 
     $('.countdown')
-        .removeClass('hidden')
-        .countdown(momentDt.toDate())
-        .on('update.countdown', function (e) {
-          $('.countdown__unit-time--days dd', this).html(e.strftime('%D'));
-          $('.countdown__unit-time--hours dd', this).html(e.strftime('%H'));
-          $('.countdown__unit-time--mins dd', this).html(e.strftime('%M'));
-          $('.countdown__unit-time--secs dd', this).html(e.strftime('%S'));
-        })
-        .on('finish.countdown', function (e) {
-          $(this).css('visibility', 'hidden');
-        })
+      .removeClass('hidden')
+      .countdown(momentDt.toDate())
+      .on('update.countdown', function (e) {
+        $('.countdown__unit-time--days dd', this).html(e.strftime('%D'));
+        $('.countdown__unit-time--hours dd', this).html(e.strftime('%H'));
+        $('.countdown__unit-time--mins dd', this).html(e.strftime('%M'));
+        $('.countdown__unit-time--secs dd', this).html(e.strftime('%S'));
+      })
+      .on('finish.countdown', function () {
+        $(this).css('visibility', 'hidden');
+      });
   })();
 </script>
 <script>
