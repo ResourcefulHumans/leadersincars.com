@@ -45,48 +45,64 @@
 
         html {
             min-height: 100%;
-            background: url('https://images.contentful.com/6z58zwugr0rp/2S74EwxuoUKSKiukGy88G6/ea1d781f23c77a131f479e7cb2646a05/tesla.jpg?w=1200&q=55') no-repeat center center;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://images.contentful.com/6z58zwugr0rp/2S74EwxuoUKSKiukGy88G6/ea1d781f23c77a131f479e7cb2646a05/tesla.jpg?w=1200&q=55', sizingMethod='scale')";
-
+            background-color: #3399ff;
+            font-family: Arial, sans-serif;
         }
 
         body {
             min-height: 100%;
-            font-family: 'archisticobold', serif;
             padding: 0;
             margin: 0;
         }
 
-        main {
+        main, aside {
             display: block;
             margin: 1em;
         }
 
+        main p {
+            font-family: Arial, sans-serif, Helvetica;
+            color: #fff;
+            font-size: 175%;
+        }
+
+        main p small {
+            font-size: 50%;
+        }
+
+        aside {
+            padding: 4rem 0;
+        }
+
+        aside form {
+            background-color: #ccc;
+            border-radius: 25px;
+            padding: 1rem;
+        }
+
+        aside h2 {
+            margin: 0 1rem;
+            padding: 0;
+            font-family: 'archisticobold', serif;
+        }
+
+        fieldset {
+            border: 0;
+        }
+
+        input {
+            padding: 0.25rem;
+            border: 0;
+            border-radius: 5px;
+        }
+
         header {
             position: relative;
+            font-family: 'archisticobold', serif;
         }
 
         dl {
             margin: 0;
-        }
-
-        header p {
-            color: #fff;
-            font-size: 20px;
-            text-align: center;
-        }
-
-        header p img {
-            width: 100%;
-            vertical-align: middle;
-        }
-
-        header p strong {
-            text-shadow: -1px 1px 0 #fff;
         }
 
         .clearfix:before, .clearfix:after {
@@ -98,38 +114,37 @@
             clear: both;
         }
 
-        .hidden {
-            display: none;
-        }
-
         footer {
             color: #fff;
             text-align: center;
             margin-top: 3em;
             margin-bottom: 5em;
+            margin-left: 4rem;
+            margin-right: 4rem;
+            font-family: 'archisticobold', serif;
         }
 
-        a.button {
-            border: 1px solid #fff;
+        footer img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a.button, button {
+            border: 1px solid #00ff00;
             text-decoration: none;
-            text-shadow: -1px -1px 0 #3399ff, 1px -1px 0 #3399ff;
-            background-color: #fff;
-            color: #3399ff;
+            background-color: #00ff00;
+            color: #fff;
             font-size: 20px;
             border-radius: 10px;
             padding: 10px;
+            text-transform: uppercase;
         }
 
-        a.button:active {
+        a.button:active, button:active {
             text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff;
             background-color: #3399ff;
             color: #fff;
             border-color: #3399ff;
-        }
-
-        a.button.primary {
-            background-color: #3399ff;
-            color: #fff;
         }
 
         nav {
@@ -145,7 +160,6 @@
 
         nav a {
             color: rgba(255, 255, 255, 0.5);
-            font-family: Arial, sans-serif;
             text-decoration: none;
             font-size: 12px;
             padding-right: 0.25em;
@@ -155,25 +169,27 @@
             color: rgba(255, 255, 255, 1);
         }
 
-        nav a em {
-            font-style: normal;
-            color: #3399ff;
-        }
-
         iframe {
             width: 300px;
             height: 168px;
             margin: 0 auto;
         }
 
-        @media (min-width: 340px) {
-            header p img {
-                width: 300px;
-            }
+        h1 {
+            text-align: center;
+            color: white;
+            margin-top: 2rem;
+            text-transform: uppercase;
+        }
 
+        @media (min-width: 340px) {
             iframe {
                 width: 340px;
                 height: 191px;
+            }
+
+            h1 {
+                font-size: 200%;
             }
         }
 
@@ -197,13 +213,17 @@
                 width: 600px;
                 height: 343px;
             }
+
+            h1 {
+                font-size: 300%;
+            }
+
+            input {
+                font-size: 200%;
+            }
         }
 
         @media (min-width: 700px) {
-            header p {
-                text-align: right;
-            }
-
             iframe {
                 width: 700px;
                 height: 394px;
@@ -211,7 +231,7 @@
         }
 
         @media (min-width: 900px) {
-            main {
+            main, aside {
                 margin: 0 auto;
                 max-width: 900px;
             }
@@ -220,6 +240,10 @@
                 width: 900px;
                 height: 507px;
             }
+
+            h1 {
+                font-size: 600%;
+            }
         }
 
         article {
@@ -227,24 +251,14 @@
             color: white;
         }
 
-        h1 {
-            text-align: center;
-            color: white;
-            font-size: 250%;
-            margin-top: 2rem;
-            text-transform: uppercase;
-        }
-
         h2 {
             font-size: 200%;
         }
 
-        #overlay {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: -99;
+        h3 {
+            font-size: 400%;
+            text-align: left;
+            margin: 0 2rem;
         }
     </style>
     <link rel="stylesheet" type="text/css" href="fonts/Archistico_Bold-webfont.css">
@@ -253,31 +267,69 @@
 
 <body>
 
-<div id="overlay"></div>
-
+<header class="clearfix">
+    <h1>Leaders in Cars</h1>
+</header>
 <main>
-    <header class="clearfix">
-        <h1>Leaders in Cars</h1>
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9k-EU-outH8?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-        <p>
-            <strong>presented for and by</strong>
-            <span itemscope itemtype="http://schema.org/Organization">
-          <a href="https://resourceful-humans.com/" itemprop="url" rel="me" target="_blank"
-             title="Resourceful Humans">
-            <img src="img/logo.svg" alt="Resourceful Humans" itemprop="logo">
-            <span class="hidden" itemprop="name">Resourceful Humans</span>
-          </a>
-      </span>
-        </p>
-    </header>
-    <footer>
-        <a href="http://eepurl.com/bQzY2L" class="button" target="_blank">
-            subscribe for updates
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9k-EU-outH8?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <section>
+        <a href="/" class="button" target="_blank" style="float: right;">
+            share
         </a>
-    </footer>
+        <p>
+            “IT’S EASIER TO CHANGE AN ALGORITHM THAN A HABIT.”<br>
+            <small>DRIVING WITH CAPTAIN L. DAVID MARQUET (RETIRED) | BEST-SELLING AUTHOR “TURN THE SHIP AROUND”</small>
+        </p>
+    </section>
 </main>
+<div style="background-color: #fff">
+    <aside>
+        <form method="POST" action="//resourceful-humans.us12.list-manage.com/subscribe?u=816e880bc2c66c0ed25dd8871&amp;id=dd40bf0338">
+            <h2>Get Early Access Email Updates</h2>
+            <fieldset style="display: flex;">
+                <input type="email" name="MERGE0" required placeholder="Enter Email Address" style="flex-grow: 1;">
+                <button type="submit" name="submit" style="margin-left: 1rem;">Subscribe</button>
+            </fieldset>
+        </form>
+    </aside>
+</div>
+<footer>
+    <section style="display: flex">
+        <div>
+            <img src="images/lic.png" height="315" width="500" align="Leaders in Cars"/></div>
+        <div style="flex-grow: 1">
+            <h3>THE WORLD’S MOST
+                MAVERICK LEADERS IN
+                THE MOST AMAZING CARS
+            </h3>
+        </div>
+    </section>
+    <section style="display: flex; align-content: space-between; justify-content: space-between; vertical-align: bottom; margin-top: 4rem;">
+        <div >
+            <img src="images/mark.png" alt="Coming Soon" width="478" height="295"/>
+            <p>
+                “THE DIGITAL CEO.”<br>
+                <small>MARK KLEIN, CEO T-MOBILE</small>
+            </p>
+        </div>
+        <div>
+            <img src="images/gary.png" height="315" width="500"/>
+            <p>
+                “HOLACRACY ISN’T THE ANSWER.”<br>
+                <small>PROFESSOR GARY HAMEL</small>
+            </p>
+        </div>
+        <div>
+            <img src="images/dan.png" height="315" width="500"/>
+            <p>
+                “LESSON’S OF THE 2ND APPLE.”<br>
+                <small>DAN WALKER, FORMER CHRO APPLE</small>
+            </p>
+        </div>
+    </section>
+</footer>
 <nav>
-    <a href="https://resourceful-humans.com/" rel="me" target="_blank"><em>Resourceful</em> Humans</a>
+    <a href="https://resourceful-humans.com/" rel="me" target="_blank">Resourceful Humans</a>
     <a href="https://resourceful-humans.com/imprint.html" rel="me" target="_blank">Imprint &amp; Privacy</a>
 </nav>
 <script>
