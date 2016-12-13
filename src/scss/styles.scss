@@ -1,0 +1,231 @@
+$enable-flex: true;
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  background-color: #3399ff;
+  font-family: Helvetica, Arial, sans-serif;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+main, aside {
+  display: block;
+  margin: 1em;
+}
+
+main p {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #fff;
+  font-size: 175%;
+}
+
+main p small {
+  font-size: 50%;
+}
+
+aside {
+  padding: 4rem 0;
+}
+
+aside form {
+  background-color: #ccc;
+  border-radius: 25px;
+  padding: 1rem;
+}
+
+aside h2 {
+  margin: 0 1rem;
+  padding: 0;
+  font-family: 'archisticobold', serif;
+}
+
+fieldset {
+  border: 0;
+}
+
+input {
+  padding: 0.25rem;
+  border: 0;
+  border-radius: 5px;
+}
+
+header {
+  position: relative;
+  font-family: 'archisticobold', serif;
+}
+
+dl {
+  margin: 0;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+footer {
+  color: #fff;
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 5em;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  font-family: 'archisticobold', serif;
+
+  h3 {
+    @include media-breakpoint-up(lg) {
+      font-size: 250%;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 400%;
+    }
+    text-align: left;
+    margin: 0 2rem;
+  }
+
+  p {
+    @include media-breakpoint-up(lg) {
+      font-size: 100%;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 150%;
+    }
+  }
+}
+
+footer img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+a.button, button {
+  border: 1px solid #00ff00;
+  text-decoration: none;
+  background-color: #00ff00;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+a.button:active, button:active {
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff;
+  background-color: #3399ff;
+  color: #fff;
+  border-color: #3399ff;
+}
+
+nav {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  text-align: center;
+}
+
+nav a:first-child {
+  display: none;
+}
+
+nav a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 12px;
+  padding-right: 0.25em;
+}
+
+nav a:hover, nav a:active, nav a:hover em, nav a:active em {
+  color: rgba(255, 255, 255, 1);
+}
+
+iframe {
+  width: 300px;
+  height: 168px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 340px) {
+  iframe {
+    width: 340px;
+    height: 191px;
+  }
+
+  h1 {
+    font-size: 200%;
+  }
+}
+
+@media (min-width: 600px) {
+  a.button {
+    font-size: 30px;
+    border-radius: 15px;
+    padding: 15px;
+  }
+
+  nav a:first-child {
+    display: inline;
+  }
+
+  nav a + a {
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    padding-left: 0.5em;
+  }
+
+  iframe {
+    width: 600px;
+    height: 343px;
+  }
+
+  h1 {
+    font-size: 300%;
+  }
+
+  input {
+    font-size: 200%;
+  }
+}
+
+@media (min-width: 700px) {
+  iframe {
+    width: 700px;
+    height: 394px;
+  }
+}
+
+@media (min-width: 900px) {
+  main, aside {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  iframe {
+    width: 900px;
+    height: 507px;
+  }
+
+  h1 {
+    font-size: 600%;
+  }
+}
+
+article {
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  font-size: 200%;
+}

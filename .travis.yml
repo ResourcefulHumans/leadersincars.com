@@ -2,19 +2,21 @@ sudo: false
 language: node_js
 cache:
   directories:
-    - node_modules
-notifications:
-  email: false
+  - node_modules
 node_js:
-  - '4'
-before_install:
-  - npm i -g npm@^2.0.0
-before_script:
-  - npm prune
+- stable
+install:
+- npm install
+script:
+- make build
 after_success:
-  - npm run semantic-release
+  - cd build
+  - git init
+  - git config user.name "Travis CI"
+  - git config user.email "jarvis@resourceful-humans.com"
+  - git add .
+  - git commit -m "Deploy to GitHub Pages"
+  - git push --force --quiet "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" master:gh-pages > /dev/null 2>&1
 branches:
-  except:
-    - "/^v\\d+\\.\\d+\\.\\d+$/"
   only:
-    - "gh-pages"
+    - "master"
