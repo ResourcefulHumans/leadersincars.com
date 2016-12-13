@@ -2,7 +2,7 @@
   "name": "leadersincars.com",
   "description": "Source code for leadersincars.com",
   "main": "index.html",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ResourcefulHumans/leadersincars.com.git"
