@@ -7,6 +7,7 @@ help: ## (default), display the list of make commands
 # HTML
 
 build/config.json: ./config.web.js
+	@mkdir -p $(dir $@)
 	./node_modules/.bin/babel-node ./config.web.js > $@
 
 htmlsrcfiles := $(shell find src/*.html -type f)
