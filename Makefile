@@ -6,14 +6,17 @@ help: ## (default), display the list of make commands
 
 # HTML
 
+build/config.json: ./config.web.js
+	./node_modules/.bin/babel-node ./config.web.js > $@
+
 htmlsrcfiles := $(shell find src/*.html -type f)
 htmlbuild := $(patsubst src/%,build/%,$(htmlsrcfiles))
-build/%.html: src/%.html ./config.*
+build/%.html: src/%.html ./config.web.js ./build/config.json
 	@mkdir -p $(dir $@)
 ifeq ($(ENVIRONMENT),development)
-	./node_modules/.bin/babel-node ./node_modules/.bin/rheactor-build-views build ./config.web $< $@
+	./node_modules/.bin/babel-node ./node_modules/.bin/rheactor-build-views build ./build/config.json $< $@
 else
-	./node_modules/.bin/babel-node ./node_modules/.bin/rheactor-build-views build -m ./config.web $< $@
+	./node_modules/.bin/babel-node ./node_modules/.bin/rheactor-build-views build -m ./build/config.json $< $@
 endif
 
 # Stylesheets
