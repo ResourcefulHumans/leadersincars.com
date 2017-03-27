@@ -6,6 +6,8 @@
 
 :earth_africa: <https://leadersincars.com/>
 
+Newsletter subscriptions are collected [in MailChimp](https://us12.admin.mailchimp.com/lists/members/?id=80225#p:1-s:25-so:null). 
+
 ### Deployment
 
 :rocket: Deployment for this package is automated via [Travis CI](https://github.com/ResourcefulHumans/accenture-configurator-backend/blob/master/.travis.yml). **Every commit will trigger a deploy.**
