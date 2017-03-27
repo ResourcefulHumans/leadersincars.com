@@ -6,11 +6,13 @@
 
 :earth_africa: <https://leadersincars.com/>
 
-Newsletter subscriptions are collected [in MailChimp](https://us12.admin.mailchimp.com/lists/members/?id=80225#p:1-s:25-so:null).
-
 The DNS settings for the domain are managed via [Route 53](https://console.aws.amazon.com/route53/home?region=us-east-1#resource-record-sets:Z3S3LHFR1G777O).
 
 Because GitHub pages do not support SSL certificates for custom domains, the CloudFront distribution [`E360KSPT0XYMLC`](https://console.aws.amazon.com/cloudfront/home?region=eu-central-1#distribution-settings:E360KSPT0XYMLC) is used to serve it SSL encrypted with the certificate [`b69ce9e3-2b6f-4a3c-8da4-06ea2c013ec4`](https://console.aws.amazon.com/acm/home?region=us-east-1#/?id=b69ce9e3-2b6f-4a3c-8da4-06ea2c013ec4).
+
+### Connected Services
+
+Newsletter subscriptions are collected [in MailChimp](https://us12.admin.mailchimp.com/lists/members/?id=80225#p:1-s:25-so:null).
 
 ### Deployment
 
