@@ -19,8 +19,8 @@ Newsletter subscriptions are collected [in MailChimp](https://us12.admin.mailchi
 ### Deployment
 
 :rocket: Deployment for this package is automated via [Travis CI](https://github.com/ResourcefulHumans/leadersincars.com/blob/master/.travis.yml).  
-**Every commit will trigger a deploy.**
+**Tags will trigger a deploy.**
 
-If `make build` successfully builds the web page, it will be force pushed to the `gh-pages` branch of this repository, which makes it available via [GitHub's free website hosting service](https://pages.github.com/) at <http://resourcefulhumans.github.io/leadersincars.com/>.
+If Travis is building a tag and `make build` successfully builds the web page, it will be force pushed to the `gh-pages` branch of this repository, which makes it available via [GitHub's free website hosting service](https://pages.github.com/) at <http://resourcefulhumans.github.io/leadersincars.com/>. Travis [provides the environment variable `TRAVIS_TAG`](https://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables) which is used to determine if a tag is built.
 
 The credentials for force pushing are provided via the environment variable `GH_TOKEN` [in Travis](https://travis-ci.org/ResourcefulHumans/leadersincars.com/settings). New tokens can be created [via the GitHub website](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/), having at least `repo` scope.
