@@ -16,7 +16,7 @@ Newsletter subscriptions are collected [in MailChimp](https://us12.admin.mailchi
 
 ### Deployment
 
-:rocket: Deployment for this package is automated via [Travis CI](https://github.com/ResourcefulHumans/accenture-configurator-backend/blob/master/.travis.yml).  
+:rocket: Deployment for this package is automated via [Travis CI](https://github.com/ResourcefulHumans/leadersincars.com/blob/master/.travis.yml).  
 **Every commit will trigger a deploy.**
 
 If `make build` successfully builds the web page, it will be force pushed to the `gh-pages` branch of this repository, which makes it available via [GitHub's free website hosting service](https://pages.github.com/) at <http://resourcefulhumans.github.io/leadersincars.com/>.
