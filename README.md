@@ -10,6 +10,8 @@ The DNS settings for the domain are managed via [Route 53](https://console.aws.a
 
 Because GitHub pages do not support SSL certificates for custom domains, the CloudFront distribution [`E360KSPT0XYMLC`](https://console.aws.amazon.com/cloudfront/home?region=eu-central-1#distribution-settings:E360KSPT0XYMLC) is used to serve it SSL encrypted with the certificate [`b69ce9e3-2b6f-4a3c-8da4-06ea2c013ec4`](https://console.aws.amazon.com/acm/home?region=us-east-1#/?id=b69ce9e3-2b6f-4a3c-8da4-06ea2c013ec4).
 
+The www redirect is configured via the S3 bucket [`www.leadersincars.com`](https://console.aws.amazon.com/s3/buckets/www.leadersincars.com/?region=eu-central-1&tab=overview) without an SSL certificate.
+
 ### Connected Services
 
 Newsletter subscriptions are collected [in MailChimp](https://us12.admin.mailchimp.com/lists/members/?id=80225#p:1-s:25-so:null).
