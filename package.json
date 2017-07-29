@@ -19,7 +19,7 @@
     "rheactor-build-views": "4.x",
     "uglifycss": "0.0.27",
     "validate-commit-email": "1.x",
-    "validate-commit-msg": "^2.10.1"
+    "validate-commit-msg": "^2.14.0"
   },
   "scripts": {
     "commitmsg": "validate-commit-msg && validate-commit-email @resourceful-humans.com$",
